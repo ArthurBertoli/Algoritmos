@@ -1,0 +1,32 @@
+//Alunos: Arthur Bertoli Silva e Guilherme Augusto Santos
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+    float valorOut [10] = {200, 500, 50, 30, 1000, 200, 600, 350, 1000, 2000};
+    float dif, resto;
+
+    for (int i = 0; i < 10; i++){
+
+        float loja1[10] = {150, 490, 50, 3, 900, 180, 550, 300, 750, 1800};
+
+        dif = loja1[i] / valorOut[i];
+        resto = dif * 100;
+        printf("Produto na posição %d, na loja 1 baixou: %% %.2f \n", i, resto);
+    }
+
+    for (int i = 0; i < 10; i++){
+
+        float loja2[10] = {100, 290, 25, 10, 1000, 280, 500, 200, 550, 2100};
+        
+        dif = loja2[i] / valorOut[i];
+        resto = dif * 100;
+        if(dif > 1){
+            printf("\nProduto na posição %d, na loja 2 subiu: %% %.2f ", i, resto);
+        }
+        printf("\nProduto na posição %d, na loja 2 baixou %% %.2f", i, resto);
+    }
+
+    return 0;
+}
